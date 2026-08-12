@@ -1,0 +1,12 @@
+!.storybook
+!.jest
+node_modules
+.next
+out
+dist
+build
+coverage
+*.lock
+eslint.config.mjs
+next.config.ts
+pnpm-lock.yaml
