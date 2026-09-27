@@ -1,9 +1,15 @@
-import { GlobalStyles } from '@/styles/global';
-import { PropsWithChildren } from 'react';
+'use client';
 
-export const Providers = ({ children }: PropsWithChildren) => (
-  <>
-    <GlobalStyles />
-    {children}
-  </>
-);
+import { GlobalStyles } from '@/styles/global';
+import theme from '@/styles/theme';
+import { PropsWithChildren } from 'react';
+import { ThemeProvider } from 'styled-components';
+
+export const Providers = ({ children }: PropsWithChildren) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      {children}
+    </ThemeProvider>
+  );
+};

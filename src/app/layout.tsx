@@ -2,6 +2,7 @@ import StyledComponentsRegistry from '@/lib/registry';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { Providers } from './providers';
+import { StyleSheetManager, stylisPluginRSC } from 'styled-components';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -23,7 +24,11 @@ const RootLayout = ({ children }: LayoutProps<'/'>) => {
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <StyledComponentsRegistry>
-          <Providers>{children}</Providers>
+          <Providers>
+            <StyleSheetManager stylisPlugins={[stylisPluginRSC]}>
+              {children}
+            </StyleSheetManager>
+          </Providers>
         </StyledComponentsRegistry>
       </body>
     </html>
