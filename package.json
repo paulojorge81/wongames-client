@@ -20,6 +20,7 @@
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "styled-components": "^6.5.3",
+    "styled-media-query": "^2.1.2",
     "stylis": "^4.4.0"
   },
   "devDependencies": {
