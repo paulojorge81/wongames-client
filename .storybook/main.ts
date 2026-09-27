@@ -1,8 +1,9 @@
-import type { StorybookConfig } from '@storybook/nextjs-vite';
-import { mergeConfig } from 'vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { mergeConfig } from 'vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
+
+import type { StorybookConfig } from '@storybook/nextjs-vite';
 
 const dirname =
   typeof __dirname !== 'undefined'
@@ -25,7 +26,7 @@ const config: StorybookConfig = {
       plugins: [tsconfigPaths()],
       resolve: {
         alias: {
-          '@': path.resolve(dirname, '../src'),
+          '~': path.resolve(dirname, '../src'),
         },
       },
     });
