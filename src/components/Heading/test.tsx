@@ -22,7 +22,7 @@ describe('<Heading />', () => {
   });
 
   test('should render a heding with a line to the left side', () => {
-    renderWithTheme(<Heading $lineLeft>Won Games</Heading>);
+    renderWithTheme(<Heading lineLeft>Won Games</Heading>);
 
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyle({
       'border-left': '0.7rem solid #3CD3C1',
@@ -30,7 +30,7 @@ describe('<Heading />', () => {
   });
 
   test('should render a heding with a line at the bottom', () => {
-    renderWithTheme(<Heading $lineBottom>Won Games</Heading>);
+    renderWithTheme(<Heading lineBottom>Won Games</Heading>);
 
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyleRule(
       'border',

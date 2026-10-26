@@ -3,6 +3,11 @@ import media from 'styled-media-query';
 
 import { HeadingProps } from '.';
 
+type WrapperProps = {
+  $lineLeft?: boolean;
+  $lineBottom?: boolean;
+} & Pick<HeadingProps, 'children' | 'color'>;
+
 const wrapperModifiers = {
   lineLeft: (theme: DefaultTheme) => css`
     padding-left: ${theme.spacings.xxsmall};
@@ -24,7 +29,7 @@ const wrapperModifiers = {
   `,
 };
 
-export const Wrapper = styled.h2<HeadingProps>`
+export const Wrapper = styled.h2<WrapperProps>`
   ${({ theme, color, $lineLeft, $lineBottom }) => css`
     color: ${theme.colors[color!]};
     font-size: ${theme.font.sizes.xlarge};

@@ -3,6 +3,10 @@ import media from 'styled-media-query';
 
 import { LogoProps } from '.';
 
+type WrapperProps = {
+  $hideOnMobile?: boolean;
+} & Pick<LogoProps, 'color' | 'size'>;
+
 const wrapperModifiers = {
   normal: () => css`
     width: 11rem;
@@ -29,7 +33,7 @@ const wrapperModifiers = {
   `,
 };
 
-export const Wrapper = styled.div<LogoProps>`
+export const Wrapper = styled.div<WrapperProps>`
   ${({ theme, color, size, $hideOnMobile }) => css`
     color: ${theme.colors[color!]};
     ${!!size && wrapperModifiers[size]}
