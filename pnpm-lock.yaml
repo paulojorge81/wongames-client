@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@styled-icons/material-outlined':
+        specifier: ^10.47.0
+        version: 10.47.0(react@19.2.8)(styled-components@6.5.3(react-dom@19.2.8(react@19.2.8))(react@19.2.8))
       next:
         specifier: 16.3.0
         version: 16.3.0(@babel/core@7.29.7)(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -1573,6 +1576,18 @@ packages:
         optional: true
       typescript:
         optional: true
+
+  '@styled-icons/material-outlined@10.47.0':
+    resolution: {integrity: sha512-/QeDSGXlfRoIsgx4g4Hb//xhsucD4mJJsNPk/e1XzckxkNG+YHCIjbAHzDwxwNfSCJYcTDcOp2SZcoS7iyNGlw==}
+    peerDependencies:
+      react: '*'
+      styled-components: '*'
+
+  '@styled-icons/styled-icon@10.7.1':
+    resolution: {integrity: sha512-WLYaeMTMhMkSxE+v+of+r2ovIk0tceDGfv8iqWHRMxvbm+6zxngVcQ4ELx6Zt/LFxqckmmoAdvo6ehiiYj6I6A==}
+    peerDependencies:
+      react: '*'
+      styled-components: '>=4.1.0'
 
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
@@ -6047,6 +6062,19 @@ snapshots:
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
+
+  '@styled-icons/material-outlined@10.47.0(react@19.2.8)(styled-components@6.5.3(react-dom@19.2.8(react@19.2.8))(react@19.2.8))':
+    dependencies:
+      '@babel/runtime': 7.29.7
+      '@styled-icons/styled-icon': 10.7.1(react@19.2.8)(styled-components@6.5.3(react-dom@19.2.8(react@19.2.8))(react@19.2.8))
+      react: 19.2.8
+      styled-components: 6.5.3(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+
+  '@styled-icons/styled-icon@10.7.1(react@19.2.8)(styled-components@6.5.3(react-dom@19.2.8(react@19.2.8))(react@19.2.8))':
+    dependencies:
+      '@babel/runtime': 7.29.7
+      react: 19.2.8
+      styled-components: 6.5.3(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
 
   '@swc/helpers@0.5.15':
     dependencies:
