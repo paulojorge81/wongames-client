@@ -36,7 +36,9 @@ globalIgnores([
   ".next/**",
   "out/**",
   "build/**",
+  "coverage/**",
   "next-env.d.ts",
+  "styled.d.ts"
 ]), {
   rules: {
     "@stylistic/space-before-function-paren": ["error", "never"]
